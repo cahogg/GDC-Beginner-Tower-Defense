@@ -14,6 +14,10 @@ config/name="GDC Beginner Tower Defense Game"
 run/main_scene="res://SceneHandler.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameData="*res://Singletons/GameData.gd"
+
 [display]
 
 window/size/width=1280

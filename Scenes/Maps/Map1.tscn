@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Environment/Tilesets/terrainTiles_default.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Environment/Props/treeGreen_large.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Environment/Props/crateMetal.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Environment/Props/crateWood.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Environment/Props/treeBrown_large.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Environment/Tilesets/Obstructed.png" type="Texture" id=6]
 
 [sub_resource type="TileSet" id=1]
 0/name = "terrainTiles_default.png 0"
@@ -125,6 +126,25 @@
 6/shape_one_way_margin = 0.0
 6/shapes = [  ]
 6/z_index = 0
+7/name = "Obstructed.png 7"
+7/texture = ExtResource( 6 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 64, 0, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -62, 672, -41.3302, 0.208312, 41.3302, -0.208312, 64, 673, 2.06017, -0.561865, -2.06017, 0.561865, 96, 641, 0.420448, 0.840896, -0.420448, -0.840896, 96, 319, -26.4882, -1.26134, 26.4882, 1.26134, 128, 288, -29.8518, -2.10224, 29.8518, 2.10224, 321, 287, -2.10224, -36.1585, 2.10224, 36.1585, 352, 316, 0, 0, 0, 0, 352, 511, -34.8972, -0.840896, 34.8972, 0.840896, 386, 543, 0, 0, 0, 0, 448, 544, 0, 0, 0, 0, 704, 544, -0.840896, 40.363, 0.840896, -40.363, 736, 511, 0, 31.1132, 0, -31.1132, 735, 322, -28.5905, -1.26134, 28.5905, 1.26134, 762, 287, -42.8857, 2.52269, 42.8857, -2.52269, 1215, 289, 0, 0, 0, 0, 1248, 259, -29.8518, 0, 29.8518, 0, 1280, 224, 0, 0, 0, 0, 1344, 224 )
+}
 
 [node name="Map1" type="Node2D"]
 
@@ -139,3 +159,7 @@ format = 1
 tile_data = PoolIntArray( 6, 3, 0, 8, 3, 0, 10, 3, 0, 15, 3, 0, 17, 3, 0, 65538, 3, 0, 65540, 6, 0, 65550, 6, 0, 131073, 6, 0, 131077, 0, 65538, 131078, 0, 1, 131079, 0, 1, 131080, 0, 1, 131081, 0, 1, 131082, 0, 1, 131083, 0, 65539, 131087, 3, 0, 131089, 3, 0, 196613, 0, 0, 196619, 0, 0, 196627, 0, 65538, 196628, 0, 1, 196629, 0, 0, 262145, 0, 65538, 262146, 0, 1, 262147, 0, 1, 262148, 0, 1, 262149, 0, 3, 262152, 3, 0, 262155, 0, 2, 262156, 0, 1, 262157, 0, 1, 262158, 0, 1, 262159, 0, 1, 262160, 0, 1, 262161, 0, 1, 262162, 0, 1, 262163, 0, 65541, 327681, 0, 0, 327685, 0, 0, 327687, 3, 0, 327689, 3, 0, 327691, 0, 0, 393217, 0, 0, 393219, 6, 0, 393221, 0, 0, 393224, 3, 0, 393227, 0, 0, 393231, 1, 0, 393233, 3, 0, 458753, 0, 0, 458757, 0, 0, 458763, 0, 0, 458766, 5, 0, 524289, 0, 0, 524291, 1, 0, 524293, 0, 65540, 524294, 0, 1, 524295, 0, 1, 524296, 0, 1, 524297, 0, 1, 524298, 0, 1, 524299, 0, 65541, 524302, 5, 0, 524303, 1, 0, 524305, 3, 0, 589825, 0, 0, 589827, 5, 0, 589838, 5, 0, 720894, 0, 0, 720895, 0, 1, 655360, 0, 1, 655361, 0, 65541, 655369, 1, 0, 655370, 6, 0, 655371, 1, 0, 655373, 1, 0, 655375, 1, 0, 655377, 3, 0 )
 
 [node name="Turrets" type="Node2D" parent="."]
+
+[node name="Path" type="Path2D" parent="."]
+position = Vector2( -3, 0 )
+curve = SubResource( 3 )
