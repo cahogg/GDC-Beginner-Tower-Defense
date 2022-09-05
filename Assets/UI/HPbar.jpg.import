@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HPbar.jpg-4eed477ae0cc6b39bf131865f4454a7e.stex"
+path="res://.import/HPbar.jpg-bad7334a22516e05838d7d3f0257fd27.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Enemies/HPbar.jpg"
-dest_files=[ "res://.import/HPbar.jpg-4eed477ae0cc6b39bf131865f4454a7e.stex" ]
+source_file="res://Assets/UI/HPbar.jpg"
+dest_files=[ "res://.import/HPbar.jpg-bad7334a22516e05838d7d3f0257fd27.stex" ]
 
 [params]
 
